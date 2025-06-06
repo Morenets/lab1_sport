@@ -38,6 +38,10 @@ public class Gym implements JsonSerializable<Gym> {
                 .orElseThrow(() -> new IllegalArgumentException("Visitor not found"));
     }
 
+    public boolean visitorExists(int id) {
+        return visitors.contains(id);
+    }
+
     public List<VisitRecord> getVisitHistoryForVisitor(int visitorId) {
         return visitHistory.stream()
                 .filter(vr -> vr.getVisitorId() == visitorId)

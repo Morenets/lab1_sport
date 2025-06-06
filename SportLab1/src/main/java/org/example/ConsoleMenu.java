@@ -34,12 +34,12 @@ public class ConsoleMenu {
                         System.out.print("Ім'я: ");
                         String name = scanner.nextLine();
 
-                        if (gym.getVisitorById(id) != null) {
+                        if (gym.visitorExists(id)) {
                             System.out.println("Відвідувач з таким ID вже існує. Додати з новим ID? (y/n): ");
                             String answer = scanner.nextLine();
                             if (answer.equalsIgnoreCase("y")) {
                                 id = getNextAvailableVisitorId(gym);
-                                System.out.println("Новий ID: " + id);
+                                System.out.println("Новий ID: " + id);1
                             } else {
                                 break;
                             }
